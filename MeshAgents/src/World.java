@@ -12,6 +12,8 @@ public class World {
 	PApplet parent; // The parent PApplet that we will render ourselves onto
 	ToxiclibsSupport gfx;
 	MultiValueMap links;
+	HashMap displayFaces;
+	Vec3D lastP;
 	
 	World(MeshAgents p, WETriangleMesh BOUNDS, ArrayList<Agent> POP) {
 		parent = p;
@@ -19,20 +21,22 @@ public class World {
 		agentPop = POP;
 		gfx=new ToxiclibsSupport(parent);
 		links = new MultiValueMap();
+		displayFaces = new HashMap(bounds.faces.size());
+		lastP = new Vec3D(0,0,0);
 		
 	}
 	 //------------METHODS
 	public void run(){
-	   updatePop();
 	   
-	   //----------------DRAW MESH WIRES
-	   /*parent.noFill();
-	   parent.stroke(25);
+	   updatePop();
+	   //----------------DRAW MESH
+	   parent.fill(0,0,0);
+	   parent.noStroke();
 	   gfx.mesh(bounds,false,0);
-	   */
+	   
 	   //----------------
 	 }
-	 
+
 	 
 	 public void updatePop(){
 	  for (int i =0;i<agentPop.size();i++){
@@ -50,5 +54,5 @@ public class World {
 	     agentPop.add(a);
 	   }
 	 }
-
+	 
 }

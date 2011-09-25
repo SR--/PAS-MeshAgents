@@ -1,3 +1,4 @@
+
 //----------------------------------------------------IMPORTS
 import processing.core.*;
 import saito.objloader.*;
@@ -30,7 +31,7 @@ public class MeshAgents extends PApplet {
   }
 
   public void draw() {
-	  background(10);
+	  background(25);
 	  stroke(2);
 	  world.run();
 	 // mm.addFrame();

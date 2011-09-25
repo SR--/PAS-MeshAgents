@@ -248,5 +248,8 @@ public class PtOnMesh {
         meshPos = ptData.pos.copy();
       }
     }
+    //push off the face
+    Vec3D n = onFace.normal.copy();
+    meshPos.addSelf(n);
   }
 }

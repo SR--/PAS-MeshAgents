@@ -33,8 +33,8 @@ public class Agent extends PtOnMesh {
     update();
     to3d();
     
-   render();
-   //drawTrails();
+   //render();
+   drawTrails();
   }
   
   public void flock() {
@@ -100,7 +100,7 @@ public class Agent extends PtOnMesh {
     //parent.endShape();//
   }
   public void render(){
-	  parent.stroke(aColour,aColour*2,aColour*3+50);
-	  parent.point(meshPos.x,meshPos.y,meshPos.z);
+		  parent.stroke(aColour,aColour*2,aColour*3+50);
+		  parent.point(meshPos.x,meshPos.y,meshPos.z);
   }
 }
