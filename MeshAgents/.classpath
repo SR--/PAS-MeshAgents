@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="core.jar"/>
-	<classpathentry kind="lib" path="controlP5.jar"/>
-	<classpathentry kind="lib" path="OBJLoader.jar"/>
-	<classpathentry kind="lib" path="PeasyCam.jar"/>
-	<classpathentry kind="lib" path="toxiclibscore.jar"/>
-	<classpathentry kind="lib" path="toxiclibs_p5.jar"/>
-	<classpathentry kind="lib" path="commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="video.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="lib" path="core.jar"/>
+	<classpathentry exported="true" kind="lib" path="controlP5.jar"/>
+	<classpathentry exported="true" kind="lib" path="OBJLoader.jar"/>
+	<classpathentry exported="true" kind="lib" path="PeasyCam.jar"/>
+	<classpathentry exported="true" kind="lib" path="toxiclibscore.jar"/>
+	<classpathentry exported="true" kind="lib" path="toxiclibs_p5.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="video.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

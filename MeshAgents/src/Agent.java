@@ -4,14 +4,14 @@ import java.util.*;
 
 import processing.core.*;
 
-public class Agent extends PtOnMesh {
+public class Agent extends PtOnMesh{
 
   //your additional properties
   ArrayList<Vec3D> trails;
-  PApplet parent;
+  MeshAgents parent;
   int aColour;
   
-  Agent(PApplet p, World W, Vec2D VEL, WEFace F) {
+  Agent(MeshAgents p, World W, Vec2D VEL, WEFace F) {
     super(W, VEL, F);
 
     //you additional constructors
@@ -21,9 +21,8 @@ public class Agent extends PtOnMesh {
     
   }
 
-  //your methods
-  public void run() {
-    
+
+  public void run(){
     //p[ut your methods here
     flock();
 
@@ -32,9 +31,9 @@ public class Agent extends PtOnMesh {
     //agent to the mesh
     update();
     to3d();
-    
-   //render();
-   drawTrails();
+
+   render();
+   //drawTrails();
   }
   
   public void flock() {
@@ -94,13 +93,16 @@ public class Agent extends PtOnMesh {
     //parent.beginShape();
     for (int i = 0;i<trails.size();i++){
       Vec3D t = (Vec3D) trails.get(i);
+
   	parent.stroke(((200/((float)trails.size()))*(float)i)+50);
      parent.point(t.x,t.y,t.z);
     }
     //parent.endShape();//
   }
   public void render(){
-		  parent.stroke(aColour,aColour*2,aColour*3+50);
-		  parent.point(meshPos.x,meshPos.y,meshPos.z);
+	 	float x = parent.screenX(meshPos.x,meshPos.y,meshPos.z);
+	 	float y = parent.screenY(meshPos.x,meshPos.y,meshPos.z);
+	 	//parent.f.s.stroke(aColour,aColour*2,aColour*3+50);
+		parent.f.s.point(x,y);
   }
 }

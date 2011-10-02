@@ -17,12 +17,15 @@ public class MeshAgents extends PApplet {
 	WETriangleMesh mesh;
 	PeasyCam cam;
 	MovieMaker mm;
+	MyCanvas f;
 	
   public void setup() {
 	  size(800,600,P3D);
+
+	  f = new MyCanvas();
+	  
 	  cam = new PeasyCam(this,1000);
 	  //mm = new MovieMaker(this, width, height, "drawing.mov", 30, MovieMaker.ANIMATION, MovieMaker.HIGH);
-
 	  mesh= initMeshes("spiky.obj");
 
 	  //create the world
@@ -31,13 +34,21 @@ public class MeshAgents extends PApplet {
   }
 
   public void draw() {
-	  background(25);
-	  stroke(2);
+
+	 f.s.fill(255,50);
+	 f.s.stroke(0);
+	 f.s.rect(0,0,f.s.width,f.s.height);
+	 
+	  background(25,5);
+	  noFill();
+	  stroke(255);
 	  world.run();
 	 // mm.addFrame();
 	  if(frameCount == 50){
 		  print(frameRate);
 	  }
+	  
+	  f.update();
   }
 
 
